@@ -1,128 +1,76 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
+import { Ticket, MessageCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ContactForm = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    computerDetails: '',
-    message: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Normally you would send this data to a server
-    console.log('Form submitted:', formData);
-    
-    toast({
-      title: "Aanvraag verzonden!",
-      description: "We nemen zo snel mogelijk contact met u op.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      computerDetails: '',
-      message: ''
-    });
-  };
-
   return (
     <section id="contact" className="py-16 bg-darkaccent">
       <div className="container">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">
-            Stuur mij een <span className="text-gradient-blue">berichtje</span>.
-          </h2>
-          <p className="text-center text-muted-foreground mb-8">
-            Wilt u weten of uw computer geschikt is voor een upgrade naar Windows 11? 
-            Vul het onderstaande formulier in en we nemen zo snel mogelijk contact met u op.
-          </p>
-          
-          <div className="bg-darkbg p-8 rounded-xl border border-border">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">Naam</label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="bg-secondary border-border"
-                />
+        <h2 className="text-3xl font-bold text-center mb-8">
+          <span className="text-gradient-blue">Ticket Systeem</span>
+        </h2>
+        
+        <div className="bg-darkbg p-8 rounded-xl border border-border hover:border-babyblu/30 transition-all hover:blue-shadow">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Ticket className="h-6 w-6 text-babyblu" />
+                <h3 className="text-xl font-bold">Maak een support ticket</h3>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">E-mailadres</label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-secondary border-border"
-                  />
+              <p className="text-muted-foreground mb-4">
+                Via ons ticket systeem brengen we het hele upgrade proces voor jou in kaart. Een ticket is de 
+                eerste stap naar een persoonlijk advies over de mogelijkheden voor jouw computer.
+              </p>
+              
+              <div className="space-y-4 mb-6">
+                <div className="flex gap-3">
+                  <MessageCircle className="h-5 w-5 text-babyblu shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">
+                    <span className="text-foreground font-medium">Persoonlijk advies:</span> We bekijken of jouw computer geschikt is voor een Windows 11 upgrade.
+                  </p>
                 </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-2">Telefoonnummer</label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="bg-secondary border-border"
-                  />
+                
+                <div className="flex gap-3">
+                  <MessageCircle className="h-5 w-5 text-babyblu shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">
+                    <span className="text-foreground font-medium">Flexibel contact:</span> Stel al je vragen en ontvang duidelijke antwoorden.
+                  </p>
+                </div>
+                
+                <div className="flex gap-3">
+                  <MessageCircle className="h-5 w-5 text-babyblu shrink-0 mt-0.5" />
+                  <p className="text-sm text-muted-foreground">
+                    <span className="text-foreground font-medium">Vrijblijvend:</span> Je betaalt pas wanneer je besluit om de upgrade te laten uitvoeren.
+                  </p>
                 </div>
               </div>
               
-              <div>
-                <label htmlFor="computerDetails" className="block text-sm font-medium mb-2">
-                  Computer details (indien bekend)
-                </label>
-                <Input
-                  id="computerDetails"
-                  name="computerDetails"
-                  placeholder="Bijv: HP EliteBook 840, Windows 10 Home, 8GB RAM"
-                  value={formData.computerDetails}
-                  onChange={handleChange}
-                  className="bg-secondary border-border"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">Uw vraag of opmerking</label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="bg-secondary border-border"
-                />
-              </div>
-              
-              <Button type="submit" className="w-full bg-babyblu hover:bg-babyblu/80 text-black">
-                Verstuur Aanvraag
+              <Button asChild className="bg-babyblu hover:bg-babyblu/80 text-black mt-2 group">
+                <Link to="/ticket">
+                  Maak een ticket 
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
-            </form>
+            </div>
+            
+            <div className="hidden md:flex justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-tr from-babyblu/20 to-transparent rounded-lg -z-10"></div>
+                <img 
+                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
+                  alt="Computer support" 
+                  className="rounded-lg object-cover w-full max-w-md h-[300px] border border-border"
+                />
+              </div>
+            </div>
           </div>
+        </div>
+        
+        <div className="mt-8 text-center text-sm text-muted-foreground">
+          <p>Liever direct contact? Mail naar <span className="text-babyblu">info@akerslootcomputers.nl</span></p>
         </div>
       </div>
     </section>
