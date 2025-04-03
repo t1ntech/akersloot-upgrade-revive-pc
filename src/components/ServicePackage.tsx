@@ -6,15 +6,15 @@ const ServicePackage = () => {
   const included = [
     "Windows 11 Pro licentie",
     "Professionele installatie",
-    "Activatie van Windows",
+    "Atlas OS Modificatie",
     "Installatie van standaard drivers",
     "Basisinstellingen configuratie"
   ];
   
   const notIncluded = [
-    "SSD schijf (indien nodig)",
-    "Data backup (uw verantwoordelijkheid)",
-    "Software-installatie buiten Windows",
+    "SSD schijf (wel vereist!)",
+    "Geen backup van bestanden (dit kan wel tegen meerprijs)",
+    "Software installaties",
     "Herstellen van persoonlijke bestanden"
   ];
 
@@ -70,6 +70,7 @@ const ServicePackage = () => {
                 Wij nemen geen verantwoordelijkheid voor dataverlies, dus zorg ervoor dat u belangrijke bestanden vooraf heeft geback-upt.
               </div>
             </div>
+            
           </div>
         </div>
       </div>

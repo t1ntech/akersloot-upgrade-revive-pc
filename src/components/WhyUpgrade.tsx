@@ -12,12 +12,12 @@ const WhyUpgrade = () => {
     {
       icon: <Shield className="w-10 h-10 text-babyblu" />,
       title: "Verbeterde Beveiliging",
-      description: "Windows 11 biedt verbeterde beveiliging met functies zoals TPM 2.0 en Secure Boot om uw gegevens te beschermen tegen moderne bedreigingen."
+      description: "Windows 11 biedt verbeterde beveiliging met functies om uw gegevens te beschermen tegen moderne bedreigingen."
     },
     {
       icon: <Zap className="w-10 h-10 text-babyblu" />,
-      title: "Betere Prestaties",
-      description: "Geniet van snellere opstarttijden, betere batterijduur en een soepeler werkende computer met Windows 11's geoptimaliseerde prestaties."
+      title: "Max Verstappen snel door AtlasOS",
+      description: "Geniet van snellere opstarttijden, door een AtlasOS modificatie in combinatie met een SSD schijf. Dit zorgt ervoor dat Windows 11 sneller draait dan ooit tevoren."
     }
   ];
 
@@ -44,9 +44,11 @@ const WhyUpgrade = () => {
         <div className="mt-12 p-6 bg-darkbg rounded-xl border border-border">
           <h3 className="text-xl font-bold mb-4">Gooi uw oude apparaat niet weg!</h3>
           <p className="text-muted-foreground">
-            Veel computers die momenteel Windows 10 draaien, kunnen prima worden geüpgraded naar Windows 11 Pro met de juiste aanpassingen. 
-            Ons team bij Akersloot Computers kan controleren of uw huidige apparaat geschikt is, en u helpen met een kosteneffectieve upgrade 
+            Veel computers die momenteel Windows 7,8,10 draaien, kunnen prima worden geüpgraded naar Windows 11 Pro met de juiste aanpassingen. 
+            Akersloot Computers kan controleren of uw huidige apparaat geschikt is, en u helpen met een kosteneffectieve installatie 
             in plaats van een duur nieuw systeem aan te schaffen.
+
+            Contact is gratis uw betaald alleen wanneer alles is klaar is.
           </p>
         </div>
       </div>

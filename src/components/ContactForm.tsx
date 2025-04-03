@@ -46,7 +46,7 @@ const ContactForm = () => {
       <div className="container">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">
-            Neem <span className="text-gradient-blue">Contact</span> Met Ons Op
+            Stuur mij een <span className="text-gradient-blue">berichtje</span>.
           </h2>
           <p className="text-center text-muted-foreground mb-8">
             Wilt u weten of uw computer geschikt is voor een upgrade naar Windows 11? 

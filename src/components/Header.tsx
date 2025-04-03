@@ -10,7 +10,7 @@ const Header = () => {
             <span className="text-darkbg font-bold text-xl">A</span>
           </div>
           <h1 className="text-xl font-bold">
-            <span className="text-gradient-blue">Akersloot</span> Computers
+            <span className="text-gradient-blue">AC</span> Computers
           </h1>
         </div>
         <nav className="hidden md:flex gap-6">
