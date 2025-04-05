@@ -18,24 +18,20 @@ const InfoPopover = ({ children, content, variant = 'default' }: InfoPopoverProp
           {children}
           <Info className={cn(
             "h-3.5 w-3.5", 
-            variant === 'danger' ? 'text-red-500' : 
-            variant === 'alert' ? 'text-red-500' : 'text-babyblu'
+            variant === 'danger' || variant === 'alert' ? 'text-red-500' : 'text-babyblu'
           )} />
         </button>
       </PopoverTrigger>
       <PopoverContent 
         className={cn(
           "max-w-sm", 
-          variant === 'danger' ? 'border-red-500 bg-red-500/10' : 
-          variant === 'alert' ? 'border-red-500 bg-red-500/10 text-red-500' : 
-          'border-babyblu/40'
+          variant === 'danger' || variant === 'alert' ? 'border-red-500' : 'border-babyblu/40'
         )}
         align="center"
       >
         <div className={cn(
           "text-sm", 
-          variant === 'danger' ? 'text-red-500' : 
-          variant === 'alert' ? 'text-red-500' : ''
+          variant === 'danger' || variant === 'alert' ? 'text-red-500' : ''
         )}>
           {content}
         </div>
@@ -45,4 +41,3 @@ const InfoPopover = ({ children, content, variant = 'default' }: InfoPopoverProp
 };
 
 export default InfoPopover;
-
