@@ -1,13 +1,24 @@
 
 import React from 'react';
 import { Clock, Shield, Zap } from 'lucide-react';
+import InfoPopover from './InfoPopover';
 
 const WhyUpgrade = () => {
   const reasons = [
     {
       icon: <Clock className="w-10 h-10 text-babyblu" />,
       title: "Windows 10 End of Life",
-      description: "Windows 10 bereikt op 14 oktober 2025 het einde van zijn levensduur. Na deze datum worden er geen beveiligingsupdates meer uitgegeven."
+      description: <span><InfoPopover 
+        content={
+          <div>
+            <p className="font-medium mb-1">Wat betekent End of Life?</p>
+            <p>End of Life betekent dat Microsoft na 14 oktober 2025 geen beveiligingsupdates of technische ondersteuning meer biedt voor Windows 10. Dit maakt je computer kwetsbaar voor nieuwe malware, virussen en cyberaanvallen die kunnen profiteren van ongedichte beveiligingslekken.</p>
+          </div>
+        }
+        variant="danger"
+      >
+        Windows 10 bereikt op 14 oktober 2025
+      </InfoPopover> het einde van zijn levensduur. Na deze datum worden er geen beveiligingsupdates meer uitgegeven.</span>
     },
     {
       icon: <Shield className="w-10 h-10 text-babyblu" />,
@@ -17,7 +28,16 @@ const WhyUpgrade = () => {
     {
       icon: <Zap className="w-10 h-10 text-babyblu" />,
       title: "Max Verstappen snel door AtlasOS",
-      description: "Geniet van snellere opstarttijden, door een AtlasOS modificatie in combinatie met een SSD schijf. Dit zorgt ervoor dat Windows 11 sneller draait dan ooit tevoren."
+      description: <span>Geniet van snellere opstarttijden, door een <InfoPopover 
+        content={
+          <div>
+            <p className="font-medium mb-1">AtlasOS voordelen</p>
+            <p>AtlasOS is een geoptimaliseerde Windows 11-configuratie die overbodige processen en services uitschakelt. Het verwijdert onnodige Windows-componenten en optimaliseert netwerk- en systeeminstellingen voor maximale prestaties, vooral nuttig voor oudere hardware.</p>
+          </div>
+        }
+      >
+        AtlasOS modificatie
+      </InfoPopover> in combinatie met een SSD schijf. Dit zorgt ervoor dat Windows 11 sneller draait dan ooit tevoren.</span>
     }
   ];
 

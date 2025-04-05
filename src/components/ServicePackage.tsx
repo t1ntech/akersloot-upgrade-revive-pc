@@ -1,19 +1,47 @@
 
 import React from 'react';
 import { Check, X } from 'lucide-react';
+import InfoPopover from './InfoPopover';
 
 const ServicePackage = () => {
   const included = [
     "Windows 11 Pro licentie",
     "Professionele installatie",
-    "Atlas OS Modificatie",
+    <span key="atlas"><InfoPopover 
+      content={
+        <div>
+          <p className="font-medium mb-1">Wat is Atlas OS?</p>
+          <p>Atlas OS is een geoptimaliseerde versie van Windows 11, speciaal ontworpen voor betere prestaties. Het verwijdert onnodige achtergrondprocessen en services, waardoor uw computer sneller opstart en vloeiender werkt, zelfs op oudere hardware.</p>
+        </div>
+      }
+    >
+      Atlas OS Modificatie
+    </InfoPopover></span>,
     "Installatie van standaard drivers",
     "Basisinstellingen configuratie"
   ];
   
   const notIncluded = [
-    "SSD schijf (wel vereist!)",
-    "Geen backup van bestanden (dit kan wel tegen meerprijs)",
+    <span key="ssd"><InfoPopover 
+      content={
+        <div>
+          <p className="font-medium mb-1">Waarom is een SSD noodzakelijk?</p>
+          <p>Een SSD (Solid State Drive) is essentieel voor optimale Windows 11 prestaties. Vergeleken met traditionele harde schijven (HDD), biedt een SSD veel snellere opstarttijden en betere algehele systeemprestaties. Voor ongeveer €40-€60 kunnen wij een geschikte SSD installeren als uw computer er nog geen heeft.</p>
+        </div>
+      }
+    >
+      SSD schijf (wel vereist!)
+    </InfoPopover></span>,
+    <span key="backup"><InfoPopover 
+      content={
+        <div>
+          <p className="font-medium mb-1">Backup service</p>
+          <p>Voor €25 extra kunnen wij uw belangrijke bestanden (documenten, foto's, etc.) veilig backuppen voordat we de nieuwe Windows 11 installatie uitvoeren. Vraag naar deze optie als u hulp nodig heeft bij het behouden van uw gegevens.</p>
+        </div>
+      }
+    >
+      Geen backup van bestanden (dit kan wel tegen meerprijs)
+    </InfoPopover></span>,
     "Software installaties",
     "Herstellen van persoonlijke bestanden"
   ];
@@ -66,7 +94,16 @@ const ServicePackage = () => {
             
             <div className="mt-8">
               <div className="p-4 bg-babyblu/10 border border-babyblu/30 rounded-lg text-sm">
-                <strong className="text-babyblu">Belangrijk:</strong> Onze service biedt altijd een schone installatie, geen upgrade. 
+                <strong className="text-babyblu">Belangrijk:</strong> <InfoPopover 
+                  content={
+                    <div>
+                      <p className="font-medium mb-1">Wat is een schone installatie?</p>
+                      <p>Een schone installatie betekent dat we Windows 11 volledig nieuw installeren, in plaats van een upgrade van uw bestaande Windows-versie. Dit levert de beste prestaties op maar betekent ook dat alle programma's opnieuw geïnstalleerd moeten worden.</p>
+                    </div>
+                  }
+                >
+                  Onze service biedt altijd een schone installatie, geen upgrade.
+                </InfoPopover> 
                 Wij nemen geen verantwoordelijkheid voor dataverlies, dus zorg ervoor dat u belangrijke bestanden vooraf heeft geback-upt.
               </div>
             </div>
