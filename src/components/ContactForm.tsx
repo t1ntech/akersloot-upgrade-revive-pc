@@ -9,7 +9,7 @@ const ContactForm = () => {
     <section id="contact" className="py-16 bg-darkaccent">
       <div className="container">
         <h2 className="text-3xl font-bold text-center mb-8">
-          <span className="text-gradient-blue">Ticket Systeem</span>
+          <span className="text-gradient-blue">Neem contact op!</span>
         </h2>
         
         <div className="bg-darkbg p-8 rounded-xl border border-border hover:border-babyblu/30 transition-all hover:blue-shadow">
@@ -17,7 +17,7 @@ const ContactForm = () => {
             <div>
               <div className="flex items-center gap-2 mb-4">
                 <Ticket className="h-6 w-6 text-babyblu" />
-                <h3 className="text-xl font-bold">Maak een support ticket</h3>
+                <h3 className="text-xl font-bold">Maak een support ticket aan!</h3>
               </div>
               
               <p className="text-muted-foreground mb-4">
@@ -70,7 +70,7 @@ const ContactForm = () => {
         </div>
         
         <div className="mt-8 text-center text-sm text-muted-foreground">
-          <p>Liever direct contact? Mail naar <span className="text-babyblu">info@akerslootcomputers.nl</span></p>
+          <p>Heeft u een andere vraag dan bovenstaande service? Mail naar <span className="text-babyblu">info@akerslootcomputers.nl</span></p>
         </div>
       </div>
     </section>

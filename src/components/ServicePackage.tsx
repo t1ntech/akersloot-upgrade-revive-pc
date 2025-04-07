@@ -102,9 +102,9 @@ const ServicePackage = () => {
                     </div>
                   }
                 >
-                  Onze service biedt altijd een schone installatie, geen upgrade.
+                Onze service biedt altijd een schone installatie, geen upgrade.
                 </InfoPopover> 
-                Wij nemen geen verantwoordelijkheid voor dataverlies, dus zorg ervoor dat u belangrijke bestanden vooraf heeft geback-upt.
+                 {' '}Wij nemen geen verantwoordelijkheid voor dataverlies, dus zorg ervoor dat u belangrijke bestanden vooraf heeft geback-upt.
               </div>
             </div>
             
