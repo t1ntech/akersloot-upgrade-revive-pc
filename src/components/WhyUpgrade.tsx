@@ -58,7 +58,7 @@ const WhyUpgrade = () => {
                 <div className="absolute inset-0 pointer-events-none opacity-30 bg-gradient-to-br from-transparent to-darkbg">
                   <div className="absolute inset-0 transform rotate-12 scale-150 translate-x-1/4 translate-y-[-15%]">
                     <img 
-                      src="https://storage.lovable.dev/uploaded/65a6b374-4f1d-4d62-9faf-23cae84f79ac.png" 
+                      src="/max-verstappen.png" 
                       alt="Max Verstappen" 
                       className="w-full h-full object-contain" 
                       style={{ 
