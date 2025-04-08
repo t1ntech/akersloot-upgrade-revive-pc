@@ -2,6 +2,7 @@
 import React from 'react';
 import { Clock, Shield, Zap } from 'lucide-react';
 import InfoPopover from './InfoPopover';
+import { AspectRatio } from './ui/aspect-ratio';
 
 const WhyUpgrade = () => {
   const reasons = [
@@ -55,17 +56,19 @@ const WhyUpgrade = () => {
               className={`relative bg-darkbg p-6 rounded-xl border border-border hover:border-babyblu/50 transition-all hover:blue-shadow overflow-hidden ${index === 2 ? 'isolation-auto' : ''}`}
             >
               {index === 2 && (
-                <div className="absolute inset-0 pointer-events-none opacity-30 bg-gradient-to-br from-transparent to-darkbg">
-                  <div className="absolute inset-0 transform rotate-12 scale-150 translate-x-1/4 translate-y-[-15%]">
-                    <img 
-                      src="/max-verstappen.png" 
-                      alt="Max Verstappen" 
-                      className="w-full h-full object-contain" 
-                      style={{ 
-                        maskImage: 'linear-gradient(to bottom right, transparent, black)', 
-                        WebkitMaskImage: 'linear-gradient(to bottom right, transparent, black)'
-                      }}
-                    />
+                <div className="absolute inset-0 pointer-events-none opacity-40 bg-gradient-to-br from-transparent to-darkbg z-0">
+                  <div className="absolute inset-0">
+                    <AspectRatio ratio={1}>
+                      <img 
+                        src="/max-verstappen.png" 
+                        alt="Max Verstappen" 
+                        className="w-full h-full object-cover opacity-60" 
+                        style={{ 
+                          maskImage: 'linear-gradient(to bottom right, transparent 30%, black 70%)', 
+                          WebkitMaskImage: 'linear-gradient(to bottom right, transparent 30%, black 70%)'
+                        }}
+                      />
+                    </AspectRatio>
                   </div>
                 </div>
               )}
