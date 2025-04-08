@@ -2,6 +2,7 @@
 import React from 'react';
 import { Clock, Shield, Zap } from 'lucide-react';
 import InfoPopover from './InfoPopover';
+import { AspectRatio } from './ui/aspect-ratio';
 
 const WhyUpgrade = () => {
   const reasons = [
@@ -56,9 +57,9 @@ const WhyUpgrade = () => {
             >
               {index === 2 && (
                 <div className="absolute inset-0 pointer-events-none opacity-30 bg-gradient-to-br from-transparent to-darkbg">
-                  <div className="absolute inset-0 transform rotate-0 scale-150 translate-x-1/4 translate-y-[%]">
+                  <div className="absolute inset-0 transform rotate-12 scale-150 translate-x-1/4 translate-y-[-15%]">
                     <img 
-                      src="/max.png" 
+                      src="https://storage.lovable.dev/uploaded/65a6b374-4f1d-4d62-9faf-23cae84f79ac.png" 
                       alt="Max Verstappen" 
                       className="w-full h-full object-contain" 
                       style={{ 
