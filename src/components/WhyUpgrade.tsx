@@ -2,7 +2,6 @@
 import React from 'react';
 import { Clock, Shield, Zap } from 'lucide-react';
 import InfoPopover from './InfoPopover';
-import maxVerstappenImg from '/public/lovable-uploads/df3a3664-210c-4d77-9653-23cae84f79ac.png';
 
 const WhyUpgrade = () => {
   const reasons = [
@@ -59,7 +58,7 @@ const WhyUpgrade = () => {
                 <div className="absolute inset-0 pointer-events-none opacity-10 bg-gradient-to-br from-transparent to-darkbg">
                   <div className="absolute inset-0 transform rotate-12 scale-150 translate-x-1/4 translate-y-[-15%]">
                     <img 
-                      src={maxVerstappenImg} 
+                      src="/lovable-uploads/df3a3664-210c-4d77-9653-23cae84f79ac.png" 
                       alt="" 
                       className="w-full h-full object-cover" 
                       style={{ 
