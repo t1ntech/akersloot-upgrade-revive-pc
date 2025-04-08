@@ -1,5 +1,6 @@
 
 import React from 'react';
+import acLogo from '/public/logo2.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,7 +12,7 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <div className="flex items-center gap-2">
               <div className="h-8 w-8 rounded-full bg-babyblu flex items-center justify-center">
-                <span className="text-darkbg font-bold text-sm">A</span>
+                <img src={acLogo} alt="AC Logo" width={80} height={80} color='white' />
               </div>
               <h3 className="text-lg font-medium">
                 <span className="text-babyblu">Akersloot</span> Computers

@@ -5,8 +5,8 @@ import InfoPopover from './InfoPopover';
 
 const ServicePackage = () => {
   const included = [
-    "Windows 11 Pro licentie",
-    "Professionele installatie",
+    "Windows 11 Pro licentie t.w.v. €139,-",
+    "Professionele service met 20 jaar vak ervaring!",
     <span key="atlas"><InfoPopover 
       content={
         <div>
@@ -17,8 +17,10 @@ const ServicePackage = () => {
     >
       Atlas OS Modificatie
     </InfoPopover></span>,
-    "Installatie van standaard drivers",
-    "Basisinstellingen configuratie"
+    "Installatie van standaard drivers * updates",
+    "Basisinstellingen configuratie",
+    "Poetsen binnenkant computer",
+    "Poetsen buitenkant computer"
   ];
   
   const notIncluded = [
@@ -50,10 +52,10 @@ const ServicePackage = () => {
     <section id="package" className="py-16">
       <div className="container">
         <h2 className="text-3xl font-bold text-center mb-4">
-          Ons Windows 11 <span className="text-gradient-blue">Upgrade Pakket</span>
+          WINDOWS 11 PRO <span className="text-gradient-blue">UPGRADE PAKKET</span>
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Voor slechts €65,- (exclusief eventuele SSD) maken wij uw computer klaar voor de toekomst met Windows 11 Pro
+          Voor slechts €69,- maken wij uw computer klaar voor de toekomst met Windows 11 Pro deze zomer!
         </p>
         
         <div className="bg-darkaccent rounded-xl overflow-hidden border border-border">
@@ -61,8 +63,8 @@ const ServicePackage = () => {
             <div className="inline-block rounded-full bg-babyblu/10 px-4 py-1 text-babyblu text-sm font-medium mb-4">
               Alles inbegrepen
             </div>
-            <h3 className="text-4xl font-bold mb-2">€65,-</h3>
-            <p className="text-muted-foreground mb-6">Exclusief eventueel benodigde SSD</p>
+            <h3 className="text-4xl font-bold mb-2">Deze zomer uw windows device een nieuw leven inblazen voor maar €69,-</h3>
+            <p className="text-muted-foreground mb-6">Exclusief -SSD</p>
             
             <div className="h-px bg-border my-6"></div>
             
@@ -104,7 +106,7 @@ const ServicePackage = () => {
                 >
                 Onze service biedt altijd een schone installatie, geen upgrade.
                 </InfoPopover> 
-                 {' '}Wij nemen geen verantwoordelijkheid voor dataverlies, dus zorg ervoor dat u belangrijke bestanden vooraf heeft geback-upt.
+                 {' '}Ik kan geen garantie geven op uw huidige apparaat, daarom eerst een goed advies! Vragen zijn altijd gratis.
               </div>
             </div>
             

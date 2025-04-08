@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import InfoPopover from './InfoPopover';
@@ -19,9 +18,9 @@ const Hero = () => {
                 }
                 variant="danger"
               >
-                Windows 10
-              </InfoPopover> <span className="text-gradient-blue">eindigt binnenkort.</span> <br />
-              Installeer Windows 11 nu samen met <InfoPopover 
+              Windows 10
+              </InfoPopover> <span className="text-gradient-blue">eindigt binnenkort. <br />
+              Installeer Windows 11 nu samen met </span><InfoPopover 
                 content={
                   <div>
                     <p className="font-medium mb-1">Wat is AtlasOS?</p>
@@ -34,7 +33,7 @@ const Hero = () => {
             </h1>
             <p className="text-lg text-muted-foreground">
               Upgrade naar Windows 11 Pro zonder uw huidige apparaat weg te gooien. 
-              Een nieuwe laptop kopen is niet altijd de beste keuze!
+              Een nieuwe laptop kopen is niet altijd de beste oplossing, vooral niet in de huidige tijd.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="bg-babyblu hover:bg-babyblu/80 text-black">
@@ -48,8 +47,8 @@ const Hero = () => {
           <div className="flex-1 relative">
             <div className="absolute -inset-4 bg-blue-glow rounded-full blur-3xl"></div>
             <div className="relative bg-darkaccent p-6 rounded-xl border border-border blue-shadow">
-              <div className="text-5xl font-bold mb-4 text-babyblu">€65,-</div>
-              <h3 className="text-xl font-medium mb-2">Volledige Windows 11 Pro installatie</h3>
+              <div className="text-5xl font-bold mb-4 text-babyblu">Deze zomer: €69,- </div>
+              <h3 className="text-xl font-medium mb-2">Breng je laptop voor een pitstop!</h3>
               <p className="text-muted-foreground mb-4"><b>Exclusief <InfoPopover 
                 content={
                   <div>
@@ -71,11 +70,19 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2 text-sm mt-1">
                 <div className="h-2 w-2 rounded-full bg-babyblu"></div>
-                <span>Samen met AtlasOS geniet u weer van Windows!</span>
+                <span>Samen met AtlasOS geeft het een klassieke Windows XP Retestrak gevoel!</span>
               </div>
               <div className="flex items-center gap-2 text-sm mt-2">
                 <div className="h-2 w-2 rounded-full bg-babyblu"></div>
-                <span>Voor 40 euro extra krijgt een gratis upgrade naar Windows 12 *vanaf laat 2026</span>
+                <span>Voor 40 euro extra krijgt u een gratis upgrade naar Windows 12 *vanaf laat 2026</span>
+              </div>
+                  <div className="flex items-center gap-2 text-sm mt-2">
+                <div className="h-2 w-2 rounded-full bg-babyblu"></div>
+                <span><strong>Ook als Microsoft zegt dat uw laptop/computer niet ondersteund wordt!</strong></span>
+              </div>
+                <div className="flex items-center gap-2 text-sm mt-2">
+                <div className="h-2 w-2 rounded-full bg-babyblu"></div>
+                <span>Schiet een ticket in dan gaan we samen aan de slag!</span>
               </div>
             </div>
           </div>

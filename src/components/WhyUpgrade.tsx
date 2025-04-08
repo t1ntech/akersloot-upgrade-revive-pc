@@ -25,6 +25,7 @@ const WhyUpgrade = () => {
       icon: <Shield className="w-10 h-10 text-babyblu" />,
       title: "Verbeterde Beveiliging",
       description: "Windows 11 biedt verbeterde beveiliging met functies om uw gegevens te beschermen tegen moderne bedreigingen."
+   
     },
     {
       icon: <Zap className="w-10 h-10 text-babyblu" />,
@@ -46,35 +47,70 @@ const WhyUpgrade = () => {
     <section id="why-upgrade" className="py-16 bg-darkaccent">
       <div className="container">
         <h2 className="text-3xl font-bold text-center mb-12">
-          Waarom <span className="text-gradient-blue">upgraden naar Windows 11?</span>
+          <span className="text-gradient-blue">WAAROM UPGRADEN NAAR WINDOWS 11?</span>
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
-          {reasons.map((reason, index) => (
-            <div 
-              key={index}
-              className={`relative bg-darkbg p-6 rounded-xl border border-border hover:border-babyblu/50 transition-all hover:blue-shadow overflow-hidden ${index === 2 ? 'isolation-auto' : ''}`}
-            >
-              {index === 2 && (
-                <div className="absolute inset-0 pointer-events-none opacity-30 bg-gradient-to-br from-transparent to-darkbg">
-                  <div className="absolute inset-0 transform rotate-12 scale-150 translate-x-1/4 translate-y-[-15%]">
-                    <img 
-                      src="public/max.png" 
-                      alt="Max Verstappen" 
-                      className="w-full h-full object-contain" 
-                      style={{ 
-                        maskImage: 'linear-gradient(to bottom right, transparent, black)', 
-                        WebkitMaskImage: 'linear-gradient(to bottom right, transparent, black)'
-                      }}
-                    />
-                  </div>
-                </div>
-              )}
-              <div className="mb-4 relative z-10">{reason.icon}</div>
-              <h3 className="text-xl font-bold mb-3 relative z-10">{reason.title}</h3>
-              <p className="text-muted-foreground relative z-10">{reason.description}</p>
-            </div>
-          ))}
+{reasons.map((reason, index) => (
+  <div 
+    key={index}
+    className={`relative bg-darkbg p-6 rounded-xl border border-border hover:border-babyblu/50 transition-all hover:blue-shadow overflow-hidden ${index === 2 ? 'isolation-auto' : ''}`}
+  >
+    {/* Achtergrondafbeeldingen per box */}
+    {index === 0 && (
+      <div className="absolute inset-0 pointer-events-none opacity-45 bg-gradient-to-br from-transparent to-darkbg">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src="public/10.png" 
+            alt="Windows 10 End of Life" 
+            className="w-full h-full object-cover" 
+            style={{ 
+              maskImage: 'linear-gradient(to bottom right, transparent, black)', 
+              WebkitMaskImage: 'linear-gradient(to bottom right, transparent, black)' 
+            }}
+          />
+        </div>
+      </div>
+    )}
+
+    {index === 1 && (
+      <div className="absolute inset-0 pointer-events-none opacity-45 bg-gradient-to-br from-transparent to-darkbg">
+        <div className="absolute inset-0 flex items-center justify-center -scale-x-100">
+          <img 
+            src="public/sec.png" 
+            alt="Verbeterde beveiliging" 
+            className="w-full h-full object-cover" 
+            style={{ 
+              maskImage: 'linear-gradient(to bottom right, transparent, black)', 
+              // transform: 'scaleX(-1)',
+              WebkitMaskImage: 'linear-gradient(to bottom right, transparent, black)' 
+            }}
+          />
+        </div>
+      </div>
+    )}
+
+    {index === 2 && (
+      <div className="absolute inset-0 pointer-events-none opacity-45 bg-gradient-to-br from-transparent to-darkbg">
+        <div className="absolute inset-0 flex items-center justify-center">
+          <img 
+            src="public/max.png" 
+            alt="Max Verstappen" 
+            className="w-full h-full object-cover" 
+            style={{ 
+              maskImage: 'linear-gradient(to bottom right, transparent, black)', 
+              WebkitMaskImage: 'linear-gradient(to bottom right, transparent, black)' 
+            }}
+          />
+        </div>
+      </div>
+    )}
+
+    <div className="mb-4 relative z-10">{reason.icon}</div>
+    <h3 className="text-xl font-bold mb-3 relative z-10">{reason.title}</h3>
+    <p className="text-muted-foreground relative z-10">{reason.description}</p>
+  </div>
+))}
         </div>
         
         <div className="mt-12 p-6 bg-darkbg rounded-xl border border-border">
@@ -85,6 +121,7 @@ const WhyUpgrade = () => {
             in plaats van een duur nieuw systeem aan te schaffen.
 
             Contact is gratis uw betaald alleen wanneer alles is klaar is.
+            Mijn naam is Tino en heb inmiddels 20 jaar IT - Service support ervaring. Zie je snel! 
           </p>
         </div>
       </div>
