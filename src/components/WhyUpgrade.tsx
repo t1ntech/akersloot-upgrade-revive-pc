@@ -2,6 +2,7 @@
 import React from 'react';
 import { Clock, Shield, Zap } from 'lucide-react';
 import InfoPopover from './InfoPopover';
+import maxVerstappenImg from '/public/lovable-uploads/df3a3664-210c-4d77-9653-23cae84f79ac.png';
 
 const WhyUpgrade = () => {
   const reasons = [
@@ -52,11 +53,26 @@ const WhyUpgrade = () => {
           {reasons.map((reason, index) => (
             <div 
               key={index}
-              className="bg-darkbg p-6 rounded-xl border border-border hover:border-babyblu/50 transition-all hover:blue-shadow"
+              className={`relative bg-darkbg p-6 rounded-xl border border-border hover:border-babyblu/50 transition-all hover:blue-shadow overflow-hidden ${index === 2 ? 'isolation-auto' : ''}`}
             >
-              <div className="mb-4">{reason.icon}</div>
-              <h3 className="text-xl font-bold mb-3">{reason.title}</h3>
-              <p className="text-muted-foreground">{reason.description}</p>
+              {index === 2 && (
+                <div className="absolute inset-0 pointer-events-none opacity-10 bg-gradient-to-br from-transparent to-darkbg">
+                  <div className="absolute inset-0 transform rotate-12 scale-150 translate-x-1/4 translate-y-[-15%]">
+                    <img 
+                      src={maxVerstappenImg} 
+                      alt="" 
+                      className="w-full h-full object-cover" 
+                      style={{ 
+                        maskImage: 'linear-gradient(to bottom right, transparent, black)', 
+                        WebkitMaskImage: 'linear-gradient(to bottom right, transparent, black)'
+                      }}
+                    />
+                  </div>
+                </div>
+              )}
+              <div className="mb-4 relative z-10">{reason.icon}</div>
+              <h3 className="text-xl font-bold mb-3 relative z-10">{reason.title}</h3>
+              <p className="text-muted-foreground relative z-10">{reason.description}</p>
             </div>
           ))}
         </div>
