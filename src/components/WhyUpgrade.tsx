@@ -55,12 +55,12 @@ const WhyUpgrade = () => {
               className={`relative bg-darkbg p-6 rounded-xl border border-border hover:border-babyblu/50 transition-all hover:blue-shadow overflow-hidden ${index === 2 ? 'isolation-auto' : ''}`}
             >
               {index === 2 && (
-                <div className="absolute inset-0 pointer-events-none opacity-20 bg-gradient-to-br from-transparent to-darkbg">
+                <div className="absolute inset-0 pointer-events-none opacity-30 bg-gradient-to-br from-transparent to-darkbg">
                   <div className="absolute inset-0 transform rotate-12 scale-150 translate-x-1/4 translate-y-[-15%]">
                     <img 
                       src="https://storage.lovable.dev/uploaded/65a6b374-4f1d-4d62-9faf-23cae84f79ac.png" 
                       alt="Max Verstappen" 
-                      className="w-full h-full object-cover" 
+                      className="w-full h-full object-contain" 
                       style={{ 
                         maskImage: 'linear-gradient(to bottom right, transparent, black)', 
                         WebkitMaskImage: 'linear-gradient(to bottom right, transparent, black)'
