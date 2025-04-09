@@ -58,11 +58,11 @@ const ContactForm = () => {
             
             <div className="hidden md:flex justify-center">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-tr opacity-45 from-babyblu/20 to-transparent rounded-lg -z-10"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr opacity-0 from-babyblu/20 to-transparent rounded-lg -z-10"></div>
                 <img 
-                  src="public/support.png" 
+                  src="public/maxkoe2.png" 
                   alt="Computer support" 
-                  className="rounded-lg opacity-60 object-cover w-full max-w-md h-[300px] border border-border"
+                  className="rounded-lg opacity-100 object-cover w-full max-w-md h-[300px] border border-border"
                 />
               </div>
             </div>
