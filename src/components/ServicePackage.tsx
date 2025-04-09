@@ -38,11 +38,11 @@ const ServicePackage = () => {
       content={
         <div>
           <p className="font-medium mb-1">Backup service</p>
-          <p>Voor €25 extra kunnen wij uw belangrijke bestanden (documenten, foto's, etc.) veilig backuppen voordat we de nieuwe Windows 11 installatie uitvoeren. Vraag naar deze optie als u hulp nodig heeft bij het behouden van uw gegevens.</p>
+          <p>Voor tegenbetaling kunnen kunnen wij uw belangrijke bestanden (documenten, foto's, etc.) veilig backuppen voordat we de nieuwe Windows 11 installatie uitvoeren. Vraag naar deze optie als u hulp nodig heeft bij het behouden van uw gegevens.</p>
         </div>
       }
     >
-      Geen backup van bestanden (dit kan wel tegen meerprijs)
+      Geen backup van bestanden.
     </InfoPopover></span>,
     "Software installaties",
     "Herstellen van persoonlijke bestanden"

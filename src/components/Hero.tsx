@@ -48,7 +48,7 @@ const Hero = () => {
             <div className="absolute -inset-4 bg-blue-glow rounded-full blur-3xl"></div>
             <div className="relative bg-darkaccent p-6 rounded-xl border border-border blue-shadow">
               <div className="text-5xl font-bold mb-4 text-babyblu">Deze zomer: €69,- </div>
-              <h3 className="text-xl font-medium mb-2">Breng je laptop voor een pitstop!</h3>
+              <h3 className="text-xl font-medium mb-2">⛽🏁 Breng je laptop voor een pitstop! </h3>
               <p className="text-muted-foreground mb-4"><b>Exclusief <InfoPopover 
                 content={
                   <div>
@@ -63,7 +63,7 @@ const Hero = () => {
                   content={
                     <div>
                       <p className="font-medium mb-1">Wat is een schone installatie?</p>
-                      <p>Een schone installatie betekent dat Windows volledig opnieuw wordt geïnstalleerd, in plaats van een upgrade van je bestaande Windows-versie. Dit zorgt voor een optimale systeemprestatie, maar betekent ook dat je persoonlijke bestanden en instellingen niet automatisch worden behouden.</p>
+                      <p>Een schone installatie betekent dat Windows volledig opnieuw wordt geïnstalleerd, in plaats van een upgrade van je bestaande Windows-versie. Dit zorgt voor een optimale systeemprestatie, maar betekent ook dat je persoonlijke bestanden en instellingen niet automatisch worden behouden. Als Windows traag is, zal hij dit meenemen in een upgrade.</p>
                     </div>
                   }
                 >Schone installatie</InfoPopover> (geen upgrade)</span>

@@ -7,7 +7,7 @@ import { AspectRatio } from './ui/aspect-ratio';
 const WhyUpgrade = () => {
   const reasons = [
     {
-      icon: <Clock className="w-10 h-10 text-babyblu" />,
+      icon: <Clock className="w-10 h-10 text-white" />,
       title: "Windows 10 End of Life",
       description: <span><InfoPopover 
         content={
@@ -22,14 +22,14 @@ const WhyUpgrade = () => {
       </InfoPopover> het einde van zijn levensduur. Na deze datum worden er geen beveiligingsupdates meer uitgegeven.</span>
     },
     {
-      icon: <Shield className="w-10 h-10 text-babyblu" />,
+      icon: <Shield className="w-10 h-10 text-white" />,
       title: "Verbeterde Beveiliging",
       description: "Windows 11 biedt verbeterde beveiliging met functies om uw gegevens te beschermen tegen moderne bedreigingen."
    
     },
     {
-      icon: <Zap className="w-10 h-10 text-babyblu" />,
-      title: "Max Verstappen snel door AtlasOS",
+      icon: <Zap className="w-10 h-10 text-white" />,
+      title: "Max Verstappen snel door AtlasOS ",
       description: <span>Geniet van snellere opstarttijden, door een <InfoPopover 
         content={
           <div>
@@ -39,7 +39,7 @@ const WhyUpgrade = () => {
         }
       >
         AtlasOS modificatie
-      </InfoPopover> in combinatie met een SSD schijf. Dit zorgt ervoor dat Windows 11 sneller draait dan ooit tevoren.</span>
+      </InfoPopover> in combinatie met een SSD schijf. Dit zorgt ervoor dat Windows 11 sneller draait dan ooit tevoren. 🏎️💨</span>
     }
   ];
 
