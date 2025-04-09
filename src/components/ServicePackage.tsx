@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Check, X } from 'lucide-react';
 import InfoPopover from './InfoPopover';
@@ -6,7 +5,7 @@ import InfoPopover from './InfoPopover';
 const ServicePackage = () => {
   const included = [
     "Windows 11 Pro licentie t.w.v. €139,-",
-    "Professionele service met 20 jaar vak ervaring!",
+    "Service met 20 jaar vak ervaring!",
     <span key="atlas"><InfoPopover 
       content={
         <div>
@@ -17,7 +16,7 @@ const ServicePackage = () => {
     >
       Atlas OS Modificatie
     </InfoPopover></span>,
-    "Installatie van standaard drivers * updates",
+    "Standaard drivers & updates",
     "Basisinstellingen configuratie",
     "Poetsen binnenkant computer",
     "Poetsen buitenkant computer"
@@ -51,52 +50,45 @@ const ServicePackage = () => {
   return (
     <section id="package" className="py-16">
       <div className="container">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          WINDOWS 11 PRO <span className="text-gradient-blue">UPGRADE PAKKET</span>
-        </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Voor slechts €69,- maken wij uw computer klaar voor de toekomst met Windows 11 Pro deze zomer!
-        </p>
-        
-        <div className="bg-darkaccent rounded-xl overflow-hidden border border-border">
+        <div className="bg-card rounded-xl overflow-hidden border border-border">
           <div className="p-8 text-center">
-            <div className="inline-block rounded-full bg-babyblu/10 px-4 py-1 text-babyblu text-sm font-medium mb-4">
+            <div className="inline-block rounded-full bg-primary/10 px-4 py-1 text-primary text-sm font-medium mb-4">
               Alles inbegrepen
             </div>
-            <h3 className="text-4xl font-bold mb-2">Deze zomer uw windows device een nieuw leven inblazen voor maar €69,-</h3>
+            <h3 className="text-4xl font-bold mb-2 text-foreground">Deze zomer uw windows device een nieuw leven inblazen voor maar €69,-</h3>
             <p className="text-muted-foreground mb-6">Exclusief -SSD</p>
             
             <div className="h-px bg-border my-6"></div>
             
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 text-left">
               <div>
-                <h4 className="font-medium mb-4">Inbegrepen bij de service:</h4>
+                <h4 className="font-medium mb-4 text-foreground">Inbegrepen bij de service:</h4>
                 <ul className="space-y-3">
                   {included.map((item, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <Check className="text-babyblu w-5 h-5 shrink-0" />
-                      <span>{item}</span>
+                    <li key={i} className="flex items-start gap-3">
+                      <Check className="text-primary w-5 h-5 shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base flex-1 text-muted-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               
-              <div>
-                <h4 className="font-medium mb-4">Niet inbegrepen:</h4>
+              <div className="mt-6 md:mt-0">
+                <h4 className="font-medium mb-4 text-foreground">Niet inbegrepen:</h4>
                 <ul className="space-y-3">
                   {notIncluded.map((item, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <X className="text-red-500 w-5 h-5 shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
+                    <li key={i} className="flex items-start gap-3">
+                      <X className="text-destructive w-5 h-5 shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base flex-1 text-muted-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
             </div>
             
-            <div className="mt-8">
-              <div className="p-4 bg-babyblu/10 border border-babyblu/30 rounded-lg text-sm">
-                <strong className="text-babyblu">Belangrijk:</strong> <InfoPopover 
+            <div className="mt-8 text-left">
+              <div className="p-4 bg-primary/10 border border-primary/30 rounded-lg text-sm text-muted-foreground">
+                <strong className="text-primary">Belangrijk:</strong> <InfoPopover 
                   content={
                     <div>
                       <p className="font-medium mb-1">Wat is een schone installatie?</p>

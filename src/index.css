@@ -1,39 +1,70 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  /* Dark mode (default) */
   :root {
-    --background: 0 0% 7%;
-    --foreground: 210 40% 98%;
+    --background: 240 10% 3.9%; /* Donkergrijs/zwart */
+    --foreground: 0 0% 98%; /* Bijna wit */
 
-    --card: 0 0% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 196 77% 57%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 196 77% 57%; /* Babyblauw */
+    --primary-foreground: 240 10% 3.9%; /* Donkergrijs voor contrast op babyblauw */
 
-    --secondary: 210 5% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 240 4.8% 95.9%; /* Lichtgrijs */
+    --secondary-foreground: 240 5.9% 10%; /* Donkergrijs */
 
-    --muted: 210 5% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 240 3.7% 15.9%; /* Gedempt donkergrijs */
+    --muted-foreground: 240 5% 64.9%; /* Gedempt lichtgrijs */
 
-    --accent: 196 77% 57%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 240 4.8% 95.9%; /* Lichtgrijs */
+    --accent-foreground: 240 5.9% 10%; /* Donkergrijs */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%; /* Rood */
+    --destructive-foreground: 0 0% 98%; /* Bijna wit */
 
-    --border: 215 27% 17%;
-    --input: 215 27% 17%;
-    --ring: 196 77% 57%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 196 77% 57%; /* Babyblauw */
     
     --radius: 0.5rem;
+  }
+
+  /* Light mode */
+  .light {
+    --background: 0 0% 100%; /* Wit */
+    --foreground: 240 10% 3.9%; /* Donkergrijs/zwart */
+
+    --card: 0 0% 100%; /* Wit */
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%; /* Wit */
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 196 77% 57%; /* Babyblauw */
+    --primary-foreground: 0 0% 98%; /* Bijna wit voor contrast op babyblauw */
+
+    --secondary: 240 4.8% 95.9%; /* Zeer lichtgrijs */
+    --secondary-foreground: 240 5.9% 10%; /* Donkergrijs */
+
+    --muted: 240 4.8% 95.9%; /* Zeer lichtgrijs */
+    --muted-foreground: 240 3.8% 46.1%; /* Gedempt grijs */
+
+    --accent: 240 4.8% 95.9%; /* Zeer lichtgrijs */
+    --accent-foreground: 240 5.9% 10%; /* Donkergrijs */
+
+    --destructive: 0 84.2% 60.2%; /* Rood */
+    --destructive-foreground: 0 0% 98%; /* Bijna wit */
+
+    --border: 240 5.9% 90%; /* Lichtgrijze rand */
+    --input: 240 5.9% 90%; /* Lichtgrijs input veld */
+    --ring: 196 77% 57%; /* Babyblauw */
   }
 }
 
@@ -43,7 +74,7 @@
   }
   
   body {
-    @apply bg-darkbg text-foreground antialiased;
+    @apply bg-background text-foreground antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 }
